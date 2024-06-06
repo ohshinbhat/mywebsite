@@ -1,22 +1,24 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Link } from 'react-router-dom'
-
+import { useNav } from '../context/NavContext'
 const Navbar = () => {
+    const { navTab, setNavTab} = useNav()
+
   return (
     <div className='pt-10'>
         <div className='flex flex-row justify-between px-[150px] text-md text-myyellow font-sans1 '>
-            <Link to='/' className=' hover:text-white focus:underline focus:underline-offset-4' autofocus>
+            <button onClick={(e)=>setNavTab('about')} className={navTab === 'about'?'underline underline-offset-4': ' hover:text-white'}>
                 About
-            </Link>
-            <Link to='/projects' className='hover:text-white focus:underline focus:underline-offset-4'>
+            </button>
+            <button onClick={(e)=>setNavTab('proj')} className={navTab === 'proj'?'underline underline-offset-4': ' hover:text-white'}>
                 Projects
-            </Link>
-            <Link to='/services' className='hover:text-white focus:underline focus:underline-offset-4'>
+            </button>
+            <button onClick={(e)=>setNavTab('service')} className={navTab === 'service'?'underline underline-offset-4': ' hover:text-white'}>
                 Services
-            </Link>
-            <Link to='/contact' className='hover:text-white focus:underline focus:underline-offset-4'>
+            </button>
+            <button onClick={(e)=>setNavTab('contact')} className={navTab === 'contact'?'underline underline-offset-4': ' hover:text-white'}>
                 Contact
-            </Link>
+            </button>
 
         </div>
     </div>

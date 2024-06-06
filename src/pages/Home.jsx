@@ -1,5 +1,5 @@
 import React from 'react'
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Navbar from '../components/Navbar';
 import FooterDown from '../components/FooterDown';
 import { VscFoldDown } from "react-icons/vsc";
@@ -8,22 +8,149 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { IconContext } from 'react-icons';
 import { Outlet } from 'react-router-dom';
-
+import TypeIt from "typeit-react";
+import { useNav } from '../context/NavContext';
+import About from './About';
+import Projects from './Projects';
+import Services from './Services';
+import Contact from './Contact';
+import { motion, useTransform } from "framer-motion";
+import useMouse from '@react-hook/mouse-position'
+import '../index.css'
 const Home = () => {
+    const { navTab, setNavTab} = useNav()
+    const [cursorVariant, setCursorVariant] = useState("default");
+    const [cursorText, setCursorText] = useState("");
+
+    const ref = React.useRef(null);
+    const mouse = useMouse(ref, {
+        enterDelay: 100,
+        leaveDelay: 100
+    });
+
+    let mouseXPosition = 0;
+    let mouseYPosition = 0;
+
+    if (mouse.x !== null) {
+        mouseXPosition = mouse.clientX;
+    }
+
+    if (mouse.y !== null) {
+        mouseYPosition = mouse.clientY;
+    }
+
+    const variants = {
+        default: {
+            opacity: 1,
+            height: 10,
+            width: 10,
+            fontSize: "16px",
+            backgroundColor: "#1e91d6",
+            x: mouseXPosition,
+            y: mouseYPosition,
+            transition: {
+                type: "spring",
+                mass: 0.6
+            }
+        },
+        project: {
+            opacity: 1,
+            // backgroundColor: "rgba(255, 255, 255, 0.6)",
+            backgroundColor: "#FFFF7F",
+            
+            color: "#000",
+            height: 80,
+            width: 80,
+            fontSize: "18px",
+            x: mouseXPosition,
+            y: mouseYPosition 
+        },
+
+    };
+
+    const spring = {
+        type: "spring",
+        stiffness: 500,
+        damping: 28
+    };
+
+    function projectEnter(event) {
+        setCursorText("View");
+        setCursorVariant("project");
+    }
+
+    function projectLeave(event) {
+        setCursorText("");
+        setCursorVariant("default");
+    }
+
+    function contactEnter(event) {
+        setCursorText("👋");
+        setCursorVariant("contact");
+    }
+
+    function contactLeave(event) {
+        setCursorText("");
+        setCursorVariant("default");
+    }
 
   return (
-    <div>
-        <div className='bg-black h-screen'>
-            <div className='flex flex-col items-center justify-center w-full h-full px-[200px] overflow-hidden '>
-                <div className='flex flex-col gap-4 px-[75px] py-[50px] text-white border-2 border-creme rounded-xl shadow-[15px_-15px_1px_rgba(221,_221,_221,_1)]'>
-                    <div className='flex flex-row w-full h-full justify-between'>
-                        <div className='flex-1 flex flex-col gap-0'>
-                            <div className='text-white font-sans2 text-md'>hey, i'm</div>
-                            <div className='h-[120px] text-myblue text-xl font-sans1 text-stroke-myyellow text-stroke [text-shadow:7px_7px_1px_rgba(247,_39,_152,_1)]'>Ohshin Bhat</div>
-
-                            <div className='text-mypink text-lg font-sans1 [text-shadow:5px_5px_1px_rgba(87,_31,_245,_1)]'>Developer and Designer</div>
-                            <div className='flex flex-row gap-8 pl-5 pt-4'>
+    <div className='bg-home bg-opacity-80 snap-y snap-mandatory overflow-y-scroll h-screen flex-grow z-0'>
+         {/*<motion.div
+            variants={variants}
+            className="circle"
+            animate={cursorVariant}
+            transition={spring}
+            >
+            <span className="cursorText">
+                <img src='/Images/ufo.png' />
+            </span>
+            </motion.div>*/}
+        <div className=' snap-always snap-center h-screen' >
+           
+            <div  className='flex flex-col items-center justify-center w-full h-full px-[50px] xs:px-[100px] sm:px-[150px] lg:px-[200px] pt-20'>
+                <div className='flex flex-col flex-wrap w-full gap-10 px-[30px] xs:px-[75px] py-[50px]  text-white border-2 border-creme rounded-xl shadow-[15px_-15px_1px_rgba(221,_221,_221,_1)]'>
+                    <div className='flex flex-col-reverse md:flex-row w-full h-full justify-between gap-5 md:gap-0 flex-wrap'>
+                        <div className='flex-1 flex flex-col gap-2 text-center md:text-left'>
+                            <div className='text-white font-sans2 text-sm mob1:text-[20px] md:text-base lg:text-md'>hey, i'm</div>
+                            <div className='leading-none text-myyellow text-base mob1:text-[36px] xs:text-[50px] lg:text-[60px] xl:text-lg 2xl:text-xl font-sans1 '>Ohshin Bhat</div>
+                            <div className='leading-none text-mypink font-sans1 text-[14px] xs:text-sm md:text-[20px] lg:text-[24px] xl:text-base 2xl:text-md '>Front-End Dev and Designer</div>
+                            <div className='leading-none text-xs xl:text-sm font-bold font-sans2 text-myblue md:pr-16'>
+                                <TypeIt
+                                    options={{
+                                    strings: ["I am a passionate Front-End developer with a knack for solving complex challenges and crafting creative solutions. I excel at quickly transforming designs into real-world Full Stack projects using cutting-edge technologies and frameworks. Through my freelance web development service, I help clients and companies architect, develop, and implement interactive websites. I love seeing the world from a bird's-eye view of creativity, which drives me to push every project into a piece of art and tell a story through design. As Parell Williams said, 'Creativity without business is Victimization. Business without creativity is waste of f**king time.'"],
+                                    speed: 5,
+                                    waitUntilVisible: true,
+                                    }}
+                                />
+                            </div>
+                            <div className='md:hidden flex flex-row gap-8 pl-5 pt-4 items-center justify-center w-full'>
+                                <a href='' target='_blank' className=''>
+                                    <IconContext.Provider value={{size: '2em'}}>
+                                        <FaGithub />
+                                    </IconContext.Provider>
+                                </a>
                                 <a href='' target='_blank'>
+                                    <IconContext.Provider value={{size: '2em'}}>
+                                        <FaLinkedin />
+                                    </IconContext.Provider>
+                                </a>
+                                <a href='' target='_blank'>
+                                    <IconContext.Provider value={{size: '2em'}}>
+                                        <FaInstagram />
+                                    </IconContext.Provider>
+                                </a>
+
+                            </div>
+
+                            
+                        </div>
+                        <div className='flex-[0.4] flex-col flex md:items-start justify-center w-full '>
+                            <div className='flex justify-center items-center'>
+                                <img src='/Images/profile.png' className='md:w-full h-[200px] sm:h-[300px] md:h-full '/>
+                            </div>
+                            <div className='hidden md:flex flex-row gap-8 pl-5 pt-4 items-center justify-center w-full'>
+                                <a href='' target='_blank' className=''>
                                     <IconContext.Provider value={{size: '2em'}}>
                                         <FaGithub />
                                     </IconContext.Provider>
@@ -41,28 +168,35 @@ const Home = () => {
 
                             </div>
                         </div>
-                        <div className='flex-[0.4] flex items-start justify-end w-full '>
-                            <img src='/Images/profile.png' className='h-[320px]'/>
-                        </div>
                     
                     </div>
-                    <div className='text-sm font-bold font-sans2 text-myyellow'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vestibulum rhoncus est pellentesque elit ullamcorper dignissim. Cras tincidunt lobortis feugiat vivamus at. Pulvinar etiam non quam lacus. Lorem ipsum dolor sit amet consectetur adipiscing elit duis. Hac habitasse platea dictumst quisque sagittis purus. Felis bibendum ut tristique et egestas. Mauris vitae ultricies leo integer malesuada nunc. Tempor id eu nisl nunc mi ipsum. At volutpat diam ut venenatis tellus in metus. Eu feugiat pretium nibh ipsum consequat. Neque egestas congue quisque egestas diam in arcu.</div>
-                </div>
-                <div className='absolute bottom-5'>
-                    <a href='#down' >
-                        <img src='/Images/scroll.gif' />                 
-                    </a>
+                    
                     
                 </div>
+                <div className='flex items-center'>
+                    <img src='/Images/scroll.gif'/>
+
+                </div>
+                
             </div>
         </div>
-        <div className='bg-black' id='down'>
+        <div className={navTab === 'contact'? 'snap-always snap-start h-screen' : 'snap-always snap-start min-h-screen'} >
             <Navbar />
             <div className='px-[200px] py-[80px]'>
-                <div className='px-[75px] py-10 text-white border-2 border-creme rounded-xl shadow-[15px_-15px_1px_rgba(221,_221,_221,_1)]'>
-                    <Outlet />
-                </div>
+               
+                    <div className='px-[75px] py-10 text-white border-2 border-creme rounded-xl shadow-[15px_-15px_1px_rgba(221,_221,_221,_1)]'>
+                        {navTab === 'about' && <About />}
+                        {navTab === 'proj' && <Projects/>}
+                        {navTab === 'service' && <Services/>}
+                        {navTab === 'contact' && <Contact />}
+                        
+                    </div>
 
+                
+
+            </div>
+            <div className='px-[100px]'>
+                <FooterDown/>
             </div>
                 
         
@@ -70,9 +204,7 @@ const Home = () => {
          
     
         </div> 
-        <div className='px-[100px] bg-black'>
-            <FooterDown/>
-        </div>
+       
 
     </div>
     

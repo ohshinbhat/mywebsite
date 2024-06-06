@@ -6,7 +6,7 @@ import { FaInstagram} from 'react-icons/fa'
 
 const FooterDown = () => {
   return (
-    <div className='border-t-[1px] border-creme bg-black font-sans2'>
+    <div className='border-t-[1px] border-creme font-sans2'>
         <div className='flex flex-row text-white pt-5 pb-5 items-center justify-between'>
 
                 <div className='text-base h-[30px] text-myblue font-sans1 [text-shadow:2px_2px_1px_rgba(247,_39,_152,_1)]'>Ohshin Bhat</div>

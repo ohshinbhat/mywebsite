@@ -11,24 +11,7 @@ const App = () => {
     {
       path : '/',
       element : <Home />,
-      children : [
-        {
-          path : '/',
-          element: <About />
-        },
-        {
-          path : '/projects',
-          element: <Projects />
-        },
-        {
-          path : '/services',
-          element : <Services />
-        },
-        {
-          path : 'contact',
-          element : <Contact />
-        }
-      ]
+      
     }
     
     ])

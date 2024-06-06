@@ -24,11 +24,33 @@ export default {
         'myorange' : '#F15412'
       },
       fontSize: {
-        'sm' : '20px',
+        'xs': '12px',
+        'sm' : '16px',
         'base' : '28px',
         'md' : '32px',
-        'lg' : '54px',
-        'xl' : '104px'
+        'lg' : '80px',
+        'xl' : '100px'
+      },
+      backgroundImage:{
+        'home' : "url('/Images/bgblk.jpg')"
+      },
+      screens: {
+        'mob1': '480px',
+        'xs': '768px',
+        'sm': '862px',
+        // => @media (min-width: 640px) { ... }
+  
+        'md': '1150px',
+        // => @media (min-width: 768px) { ... }
+  
+        'lg': '1280px',
+        // => @media (min-width: 1024px) { ... }
+  
+        'xl': '1536px',
+        // => @media (min-width: 1280px) { ... }
+  
+        '2xl': '1780px',
+        // => @media (min-width: 1536px) { ... }
       }
     },
   },
