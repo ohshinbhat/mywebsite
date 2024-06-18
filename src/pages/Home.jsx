@@ -108,14 +108,14 @@ const Home = () => {
             </motion.div>*/}
         <div className=' snap-always snap-center h-screen' >
            
-            <div  className='flex flex-col items-center justify-center w-full h-full px-[50px] xs:px-[100px] sm:px-[150px] lg:px-[200px] pt-20'>
-                <div className='flex flex-col flex-wrap w-full gap-10 px-[30px] xs:px-[75px] py-[50px]  text-white border-2 border-creme rounded-xl shadow-[15px_-15px_1px_rgba(221,_221,_221,_1)]'>
+            <div  className='flex flex-col items-center justify-center w-full h-full px-[50px] xs:px-[100px] sm:px-[150px] lg:px-[200px] pt-8 xs:pt-12 md:pt-20'>
+                <div className='flex flex-col flex-wrap w-full sm:gap-10 px-[30px] xs:px-[75px] py-5 xs:py-[50px]  text-white border-2 border-creme rounded-xl shadow-[15px_-15px_1px_rgba(221,_221,_221,_1)]'>
                     <div className='flex flex-col-reverse md:flex-row w-full h-full justify-between gap-5 md:gap-0 flex-wrap'>
                         <div className='flex-1 flex flex-col gap-2 text-center md:text-left'>
                             <div className='text-white font-sans2 text-sm mob1:text-[20px] md:text-base lg:text-md'>hey, i'm</div>
                             <div className='leading-none text-myyellow text-base mob1:text-[36px] xs:text-[50px] lg:text-[60px] xl:text-lg 2xl:text-xl font-sans1 '>Ohshin Bhat</div>
                             <div className='leading-none text-mypink font-sans1 text-[14px] xs:text-sm md:text-[20px] lg:text-[24px] xl:text-base 2xl:text-md '>Front-End Dev and Designer</div>
-                            <div className='leading-none text-xs xl:text-sm font-bold font-sans2 text-myblue md:pr-16'>
+                            <div className='leading-none text-[10px] sm:text-xs xl:text-sm font-bold font-sans2 text-myblue md:pr-16'>
                                 <TypeIt
                                     options={{
                                     strings: ["I am a passionate Front-End developer with a knack for solving complex challenges and crafting creative solutions. I excel at quickly transforming designs into real-world Full Stack projects using cutting-edge technologies and frameworks. Through my freelance web development service, I help clients and companies architect, develop, and implement interactive websites. I love seeing the world from a bird's-eye view of creativity, which drives me to push every project into a piece of art and tell a story through design. As Parell Williams said, 'Creativity without business is Victimization. Business without creativity is waste of f**king time.'"],
@@ -147,7 +147,7 @@ const Home = () => {
                         </div>
                         <div className='flex-[0.4] flex-col flex md:items-start justify-center w-full '>
                             <div className='flex justify-center items-center'>
-                                <img src='/Images/profile.png' className='md:w-full h-[200px] sm:h-[300px] md:h-full '/>
+                                <img src='/Images/profile.png' className='md:w-full h-[150px] sm:h-[300px] md:h-full '/>
                             </div>
                             <div className='hidden md:flex flex-row gap-8 pl-5 pt-4 items-center justify-center w-full'>
                                 <a href='' target='_blank' className=''>
@@ -173,7 +173,7 @@ const Home = () => {
                     
                     
                 </div>
-                <div className='flex items-center'>
+                <div className='hidden sm:flex sm:items-center'>
                     <img src='/Images/scroll.gif'/>
 
                 </div>
@@ -182,9 +182,9 @@ const Home = () => {
         </div>
         <div className={navTab === 'contact'? 'snap-always snap-start h-screen' : 'snap-always snap-start min-h-screen'} >
             <Navbar />
-            <div className='px-[200px] py-[80px]'>
+            <div className='px-[30px] xs:px-[50px] sm:px-[100px] md:px-[200px] py-[80px]'>
                
-                    <div className='px-[75px] py-10 text-white border-2 border-creme rounded-xl shadow-[15px_-15px_1px_rgba(221,_221,_221,_1)]'>
+                    <div className=' py-10 text-white border-2 border-creme rounded-xl shadow-[15px_-15px_1px_rgba(221,_221,_221,_1)]'>
                         {navTab === 'about' && <About />}
                         {navTab === 'proj' && <Projects/>}
                         {navTab === 'service' && <Services/>}

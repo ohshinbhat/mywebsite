@@ -6,7 +6,7 @@ const Navbar = () => {
 
   return (
     <div className='pt-10'>
-        <div className='flex flex-row justify-between px-[150px] text-md text-myyellow font-sans1 '>
+        <div className='flex flex-row justify-between px-[20px] xs:px-[50px] sm:px-[100px] md:px-[150px] text-[14px] xs:text-sm sm:text-[20px] md:text-md text-myyellow font-sans1 '>
             <button onClick={(e)=>setNavTab('about')} className={navTab === 'about'?'underline underline-offset-4': ' hover:text-white'}>
                 About
             </button>
