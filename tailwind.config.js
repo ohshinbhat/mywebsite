@@ -13,7 +13,7 @@ export default {
       },
       textStrokeColor: theme => theme('colors'),
       fontFamily: {
-        'sans1': ['Daisyogre'],
+        'sans1': ["Daisyogre"],
         'sans2' : ["Space Mono"] 
       },
       colors:{
