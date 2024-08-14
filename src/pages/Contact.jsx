@@ -6,7 +6,7 @@ import { MdArrowRightAlt } from "react-icons/md";
 const Contact = () => {
   return (
     <div className=''>
-      <div className='flex flex-col-reverse md:flex-row gap-5'>
+      <div className='flex flex-col-reverse md:flex-row gap-5 px-[75px]'>
         <div className='flex-1 flex flex-col font-sans2 pb-8'>
           <div className='text-lg pb-4'>Let's get in touch</div>
           <div className='text-mypink pb-5'>If you have a software development project or idea in mind, I would love to hear from you! Let's collaborate to turn your vision into reality. Please don't hesitate to reach out to discuss your requirements, ask any questions, or explore how we can work together.</div>

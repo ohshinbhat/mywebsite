@@ -3,7 +3,7 @@ import React from 'react'
 const Projects = () => {
   return (
     <div className=''>
-        <div className='flex flex-col gap-20 font-sans2 py-5 text-white'>
+        <div className='flex flex-col gap-20 font-sans2 py-5 text-white px-[75px]'>
             <div className='flex flex-col gap-4 w-full'>
                 <div className='text-md font-semibold text-center w-full '>Diverse Project Highlights</div>
                 <div className='text-[16px] pb-12'>These are my go-to frameworks for efficiency and performance, I can also adapt to new tools to cater the needs of clients, ensuring seamless web applications. Tech-Stack vary from project to project. I'm keen on learning new exciting technologies everyday.</div>

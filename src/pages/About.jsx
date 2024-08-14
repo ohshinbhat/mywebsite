@@ -171,7 +171,7 @@ const About = () => {
                     </motion.a>                    
                 </motion.div>
                 </div>
-                <div className='flex flex-col gap-4 border-t-[1px]'>
+                <div className='flex flex-col gap-4 border-t-[1px] mx-[50px] sm:mx-[75px]'>
                 <div className=' px-[50px] sm:px-[75px] text-sm mob1:text-base md:text-md font-semibold text-center pt-10'>Creative Suite: My Editing Toolbox</div>
                 <div className='px-[50px] sm:px-[75px] text-xs md:text-[16px] pb-12'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi illo tenetur ipsa sapiente atque? Assumenda, voluptatibus velit cupiditate eos ea dignissimos libero, et distinctio quibusdam dolor, magnam rerum similique nisi?</div>
                 <motion.div id='container' variants={container} initial="hidden" whileInView="visible" viewport={{once:true}} className='px-[30px] sm:px-[75px] flex flex-row justify-center items-center flex-wrap gap-5 md:gap-10'>
