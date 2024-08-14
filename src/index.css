@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&display=swap');
 @font-face {
   font-family: Daisyogre;
-  src: url(/Fonts/Daisyogre.ttf);
+  src: url(/public/Fonts/Daisyogre.ttf);
 }
 html{
   margin: 0px;
