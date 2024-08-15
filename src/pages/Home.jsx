@@ -11,12 +11,14 @@ import { Outlet } from 'react-router-dom';
 import TypeIt from "typeit-react";
 import { useNav } from '../context/NavContext';
 import About from './About';
-import Projects from './Projects';
 import Services from './Services';
 import Contact from './Contact';
 import { motion, useTransform } from "framer-motion";
 import useMouse from '@react-hook/mouse-position'
+import { FaXTwitter } from "react-icons/fa6";
 import '../index.css'
+import Development from './Development';
+
 const Home = () => {
     const { navTab, setNavTab} = useNav()
     const [cursorVariant, setCursorVariant] = useState("default");
@@ -42,10 +44,10 @@ const Home = () => {
     const variants = {
         default: {
             opacity: 1,
-            height: 10,
-            width: 10,
-            fontSize: "16px",
-            backgroundColor: "#1e91d6",
+            height: 60,
+            width: 60,
+            borderRadius: "50%",  // Circular shape
+            background: "conic-gradient(from 135deg at 50% 50%, rgba(255, 255, 127, 0.6), rgba(255, 255, 127, 0.6) 60deg, transparent 90deg, transparent)",  // Quarter-circle effect
             x: mouseXPosition,
             y: mouseYPosition,
             transition: {
@@ -55,18 +57,17 @@ const Home = () => {
         },
         project: {
             opacity: 1,
-            // backgroundColor: "rgba(255, 255, 255, 0.6)",
-            backgroundColor: "#FFFF7F",
-            
-            color: "#000",
+            background: "conic-gradient(from 135deg at 50% 50%, rgba(255, 255, 127, 0.8), rgba(255, 255, 127, 0.8) 0d6eg, transparent 90deg, transparent)",  // Stronger quarter-circle effect
             height: 80,
             width: 80,
-            fontSize: "18px",
+            boxShadow: "0 0 50px 50px rgba(255, 255, 127, 0.8)",  // Stronger glow effect
             x: mouseXPosition,
             y: mouseYPosition 
         },
-
     };
+    
+    
+    
 
     const spring = {
         type: "spring",
@@ -95,21 +96,28 @@ const Home = () => {
     }
 
   return (
-    <div className='bg-home bg-opacity-80 snap-y snap-mandatory overflow-y-scroll h-screen flex-grow z-0'>
-         {/*<motion.div
+    <div className='bg-home snap-y snap-mandatory overflow-y-scroll h-screen flex-grow z-0 ' ref={ref}>
+        <motion.div
             variants={variants}
             className="circle"
             animate={cursorVariant}
             transition={spring}
-            >
+            style={{
+                position: 'absolute',
+                left: 0,
+                top: 0,
+                pointerEvents: 'none',
+                zIndex: 9999,
+            }}
+        >
             <span className="cursorText">
-                <img src='/Images/ufo.png' />
+                <img src='/Images/ufo.png' alt='UFO Cursor' style={{ width: '100%', height: '100%' }} />
             </span>
-            </motion.div>*/}
-        <div className=' snap-always snap-center h-screen' >
-           
+        </motion.div>
+
+        <div className='snap-always snap-center h-screen' >
             <div  className='flex flex-col items-center justify-center w-full h-full px-[50px] xs:px-[100px] sm:px-[150px] lg:px-[200px] pt-8 xs:pt-12 md:pt-20'>
-                <div className='flex flex-col flex-wrap w-full sm:gap-10 px-[30px] xs:px-[75px] py-5 xs:py-[50px]  text-white border-2 border-creme rounded-xl shadow-[15px_-15px_1px_rgba(221,_221,_221,_1)]'>
+                <div className='flex flex-col flex-wrap w-full sm:gap-10 px-[30px] xs:px-[75px] py-5 xs:py-[50px] text-white border-2 border-creme rounded-xl shadow-[15px_-15px_1px_rgba(221,_221,_221,_1)]'>
                     <div className='flex flex-col-reverse md:flex-row w-full h-full justify-between gap-5 md:gap-0 flex-wrap'>
                         <div className='flex-1 flex flex-col gap-2 text-center md:text-left'>
                             <div className='text-white font-sans2 text-sm mob1:text-[20px] md:text-base lg:text-md'>hey, i'm</div>
@@ -125,6 +133,11 @@ const Home = () => {
                                 />
                             </div>
                             <div className='md:hidden flex flex-row gap-8 pl-5 pt-4 items-center justify-center w-full'>
+                                <a href='' target='_blank'>
+                                    <IconContext.Provider value={{size: '2em'}}>
+                                        <FaXTwitter />
+                                    </IconContext.Provider>
+                                </a>
                                 <a href='' target='_blank' className=''>
                                     <IconContext.Provider value={{size: '2em'}}>
                                         <FaGithub />
@@ -150,6 +163,11 @@ const Home = () => {
                                 <img src='/Images/profile.png' className='md:w-full h-[150px] sm:h-[300px] md:h-full '/>
                             </div>
                             <div className='hidden md:flex flex-row gap-8 pl-5 pt-4 items-center justify-center w-full'>
+                                <a href='' target='_blank'>
+                                    <IconContext.Provider value={{size: '2em'}}>
+                                        <FaXTwitter />
+                                    </IconContext.Provider>
+                                </a>
                                 <a href='' target='_blank' className=''>
                                     <IconContext.Provider value={{size: '2em'}}>
                                         <FaGithub />
@@ -186,7 +204,7 @@ const Home = () => {
                
                     <div className=' py-10 text-white border-2 border-creme rounded-xl shadow-[15px_-15px_1px_rgba(221,_221,_221,_1)]'>
                         {navTab === 'about' && <About />}
-                        {navTab === 'proj' && <Projects/>}
+                        {navTab === 'develop' && <Development/>}
                         {navTab === 'service' && <Services/>}
                         {navTab === 'contact' && <Contact />}
                         
@@ -207,8 +225,7 @@ const Home = () => {
        
 
     </div>
-    
   )
 }
 
-export default Home
+export default Home;

@@ -14,7 +14,8 @@ export default {
       textStrokeColor: theme => theme('colors'),
       fontFamily: {
         'sans1': ["Daisyogre"],
-        'sans2' : ["Space Mono"] 
+        'sans2' : ["Space Mono"],
+        'sans3':["Space Grotesk"]
       },
       colors:{
         'creme' : '#E0D5C0',

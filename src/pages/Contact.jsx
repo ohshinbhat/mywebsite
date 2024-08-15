@@ -18,6 +18,20 @@ const Contact = () => {
               <input className="appearance-none block w-[500px] bg-white text-sm bg-opacity-10 backdrop-blur-lg text-white border border-creme rounded py-3 px-4 mb-3 leading-tight focus:outline-none" id="grid-first-name" type="text" placeholder="Enter your Name" />
             </div>
             <div className='relative w-full min-w-[200px]'>
+              <label className="block uppercase tracking-wide text-myblue text-xs font-bold mb-2" htmlFor="name">
+                Your Name
+              </label>
+              <select className="appearance-none block text-black w-[500px] text-sm border border-creme rounded py-3 px-4 mb-3 leading-tight bg-none focus:outline-none " placeholder="Select the service">
+                <option>Front-end Development</option>
+                <option>Design</option>
+                <option>Marketing</option>
+                <option>Media</option>
+
+
+
+              </select>
+            </div>
+            <div className='relative w-full min-w-[200px]'>
               <label className="block uppercase tracking-wide text-myblue text-xs font-bold mb-2" htmlFor="message">
                 Your Message
               </label>

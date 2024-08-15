@@ -50,161 +50,37 @@ const About = () => {
   return (
     <div className=''>
         <div className='flex flex-col gap-20 font-sans2 py-5 text-white'>
-            <div className='flex flex-col gap-4 w-full'>
-                <div className='px-[50px] sm:px-[75px] text-sm mob1:text-base md:text-md font-semibold text-center w-full '>Tools of the Trade: My Tech Stack</div>
-                <div className='px-[50px] sm:px-[75px] text-xs md:text-[16px] pb-12'>These are my go-to frameworks for efficiency and performance, I can also adapt to new tools to cater the needs of clients, ensuring seamless web applications. Tech-Stack vary from project to project. I'm keen on learning new exciting technologies everyday.</div>
-                <motion.div id='container' variants={container} initial="hidden" whileInView="visible" viewport={{once:true}} className='px-[30px] sm:px-[75px] flex flex-row w-full justify-center flex-wrap gap-5 md:gap-10 items-center'>
-                    <motion.a id='item' variants={item} href='https://developer.mozilla.org/en-US/docs/Web/HTML' target='_blank' className='flex flex-col gap-3 w-[70px] xs:w-[100px] md:w-[150px] px-10 py-3 rounded-lg bg-opacity-20 backdrop-filter backdrop-blur-lg bg-white text-white font-extralight border-creme border-[1px] items-center justify-center'>
-                        <IconContext.Provider value={{size: '3.5em', }}>
-                            <TiHtml5/>
-                        </IconContext.Provider>
-                        <div className='text-xs xs:text-sm '>HTML</div>                        
-                    </motion.a>
-                    <motion.a id='item' variants={item} href='https://developer.mozilla.org/en-US/docs/Web/CSS' target='_blank' className='flex flex-col gap-3 w-[70px] xs:w-[100px] md:w-[150px] px-10 py-3 rounded-lg bg-opacity-20 backdrop-filter backdrop-blur-lg bg-white text-white font-extralight border-creme border-[1px] items-center justify-center'>
-                        <IconContext.Provider value={{size: '3.5em', }}>
-                            <TiCss3/>
-                        </IconContext.Provider>
-                        <div className='text-xs xs:text-sm '>CSS</div>                        
-                    </motion.a>
-                    <motion.a id='item' variants={item} href='https://developer.mozilla.org/en-US/docs/Web/JavaScript' target='_blank' className='flex flex-col gap-3 px-10 w-[70px] xs:w-[100px] md:w-[150px] py-3 rounded-lg bg-opacity-20 backdrop-filter backdrop-blur-lg bg-white text-white font-extralight border-creme border-[1px] items-center justify-center'>
-                        <IconContext.Provider value={{size: '3.5em', }}>
-                            <TbBrandJavascript/>
-                        </IconContext.Provider>
-                        <div className='text-xs xs:text-sm '>Javascript</div>                        
-                    </motion.a>
-                    <motion.a id='item' variants={item} href='https://react.dev' target='_blank' className='flex flex-col gap-3 px-10 w-[70px] xs:w-[100px] md:w-[150px] py-3 rounded-lg bg-opacity-20 backdrop-filter backdrop-blur-lg bg-white text-white font-extralight border-creme border-[1px] items-center justify-center'>
-                        <IconContext.Provider value={{size: '3.5em', }}>
-                            <FaReact/>
-                        </IconContext.Provider>
-                        <div className='text-xs xs:text-sm '>ReactJs</div>                        
-                    </motion.a>
-                    <motion.a id='item' variants={item} href='https://nextjs.org' target='_blank' className='flex flex-col gap-3 px-10 w-[70px] xs:w-[100px] md:w-[150px] py-3 rounded-lg bg-opacity-20 backdrop-filter backdrop-blur-lg bg-white text-white font-extralight border-creme border-[1px] items-center justify-center'>
-                        <IconContext.Provider value={{size: '3.5em', }}>
-                            <TbBrandNextjs/>
-                        </IconContext.Provider>
-                        <div className='text-xs xs:text-sm '>NextJs</div>                        
-                    </motion.a>
-                    <motion.a id='item' variants={item} href='https://tailwindcss.com' target='_blank' className='flex flex-col gap-3 px-10 w-[70px] xs:w-[100px] md:w-[150px] py-3 rounded-lg bg-opacity-20 backdrop-filter backdrop-blur-lg bg-white text-white font-extralight border-creme border-[1px] items-center justify-center'>
-                        <IconContext.Provider value={{size: '3.5em', }}>
-                            <BiLogoTailwindCss/>
-                        </IconContext.Provider>
-                        <div className='text-xs xs:text-sm '>Tailwind</div>                        
-                    </motion.a>
-                    <motion.a id='item' variants={item} href='https://www.typescriptlang.org' target='_blank' className='flex flex-col gap-3 px-10 w-[70px] xs:w-[100px] md:w-[150px] py-3 rounded-lg bg-opacity-20 backdrop-filter backdrop-blur-lg bg-white text-white font-extralight border-creme border-[1px] items-center justify-center'>
-                        <IconContext.Provider value={{size: '3.5em', }}>
-                            <BiLogoTypescript/>
-                        </IconContext.Provider>
-                        <div className='text-xs xs:text-sm '>TypeScript</div>                        
-                    </motion.a>
-                    <motion.a id='item' variants={item} href='https://redux-toolkit.js.org' target='_blank' className='flex flex-col gap-3 px-10 w-[70px] xs:w-[100px] md:w-[150px] py-3 rounded-lg bg-opacity-20 backdrop-filter backdrop-blur-lg bg-white text-white font-extralight border-creme border-[1px] items-center justify-center'>
-                        <IconContext.Provider value={{size: '3.5em', }}>
-                            <TbBrandRedux/>
-                        </IconContext.Provider>
-                        <div className='text-xs xs:text-sm '>TypeScript</div>                        
-                    </motion.a>
-                    <motion.a id='item' variants={item} href='https://tanstack.com/query/v4' target='_blank' className='flex flex-col gap-3 px-10 w-[70px] xs:w-[100px] md:w-[150px] py-3 rounded-lg bg-opacity-20 backdrop-filter backdrop-blur-lg bg-white text-white font-extralight border-creme border-[1px] items-center justify-center'>
-                        <IconContext.Provider value={{size: '3.5em', }}>
-                            <SiReactquery/>
-                        </IconContext.Provider>
-                        <div className='text-xs xs:text-sm '>ReactQuery</div>                        
-                    </motion.a>
-                    <motion.a id='item' variants={item} href='https://dev.java' target='_blank' className='flex flex-col gap-3 px-10 w-[70px] xs:w-[100px] md:w-[150px] py-3 rounded-lg bg-opacity-20 backdrop-filter backdrop-blur-lg bg-white text-white font-extralight border-creme border-[1px] items-center justify-center'>
-                        <IconContext.Provider value={{size: '3.5em', }}>
-                            <FaJava/>
-                        </IconContext.Provider>
-                        <div className='text-xs xs:text-sm '>Java</div>                        
-                    </motion.a>
-                    <motion.a id='item' variants={item} href='https://www.python.org' target='_blank' className='flex flex-col gap-3 px-10 w-[70px] xs:w-[100px] md:w-[150px] py-3 rounded-lg bg-opacity-20 backdrop-filter backdrop-blur-lg bg-white text-white font-extralight border-creme border-[1px] items-center justify-center'>
-                        <IconContext.Provider value={{size: '3.5em', }}>
-                            <TbBrandPython/>
-                        </IconContext.Provider>
-                        <div className='text-xs xs:text-sm '>Python</div>                        
-                    </motion.a>
-                    <motion.a id='item' variants={item} href='https://www.mongodb.com' target='_blank' className='flex flex-col gap-3 px-10 w-[70px] xs:w-[100px] md:w-[150px] py-3 rounded-lg bg-opacity-20 backdrop-filter backdrop-blur-lg bg-white text-white font-extralight border-creme border-[1px] items-center justify-center'>
-                        <IconContext.Provider value={{size: '3.5em', }}>
-                            <BiLogoMongodb/>
-                        </IconContext.Provider>
-                        <div className='text-xs xs:text-sm '>MongoDB</div>                        
-                    </motion.a>
-                    <motion.a id='item' variants={item} href='https://www.prisma.io' target='_blank' className='flex flex-col gap-3 px-10 w-[70px] xs:w-[100px] md:w-[150px] py-3 rounded-lg bg-opacity-20 backdrop-filter backdrop-blur-lg bg-white text-white font-extralight border-creme border-[1px] items-center justify-center'>
-                        <IconContext.Provider value={{size: '3.5em', }}>
-                            <SiPrisma />
-                        </IconContext.Provider>
-                        <div className='text-xs xs:text-sm '>Prisma</div>                        
-                    </motion.a>
-                    <motion.a id='item' variants={item} href='https://aws.amazon.com' target='_blank' className='flex flex-col gap-3 px-10 w-[70px] xs:w-[100px] md:w-[150px] py-3 rounded-lg bg-opacity-20 backdrop-filter backdrop-blur-lg bg-white text-white font-extralight border-creme border-[1px] items-center justify-center'>
-                        <IconContext.Provider value={{size: '3.5em', }}>
-                            <FaAws />
-                        </IconContext.Provider>
-                        <div className='text-xs xs:text-sm '>AWS</div>                        
-                    </motion.a>
-                    <motion.a id='item' variants={item} href='https://mui.com' target='_blank' className='flex flex-col gap-3 px-10 w-[70px] xs:w-[100px] md:w-[150px] py-3 rounded-lg bg-opacity-20 backdrop-filter backdrop-blur-lg bg-white text-white font-extralight border-creme border-[1px] items-center justify-center'>
-                        <IconContext.Provider value={{size: '3.5em', }}>
-                            <SiMui />
-                        </IconContext.Provider>
-                        <div className='text-xs xs:text-sm '>MUI</div>                        
-                    </motion.a>
-                    <motion.a id='item' variants={item} href='www.figma.com' target='_blank' className='flex flex-col gap-3 px-10 w-[70px] xs:w-[100px] md:w-[150px] py-3 rounded-lg bg-opacity-20 backdrop-filter backdrop-blur-lg bg-white text-white font-extralight border-creme border-[1px] items-center justify-center'>
-                        <IconContext.Provider value={{size: '3.5em', }}>
-                            <FaFigma />
-                        </IconContext.Provider>
-                        <div className='text-xs xs:text-sm '>Figma</div>                        
-                    </motion.a>
-                    <motion.a id='item' variants={item} href='https://vitejs.dev' target='_blank' className='flex flex-col gap-3 px-10 w-[70px] xs:w-[100px] md:w-[150px] py-3 rounded-lg bg-opacity-20 backdrop-filter backdrop-blur-lg bg-white text-white font-extralight border-creme border-[1px] items-center justify-center'>
-                        <IconContext.Provider value={{size: '3.5em', }}>
-                            <SiVitest />
-                        </IconContext.Provider>
-                        <div className='text-xs xs:text-sm '>Vite</div>                        
-                    </motion.a>
+            <div className='flex flex-col gap-10 w-full px-[50px] sm:px-[75px]'>
+                <div className='flex flex-row gap-20 border-white py-10 border-b-[1px]'>
+                    <img src='/Images/abt.jpg'  className='border-creme rounded-xl shadow-[10px_-10px_1px_rgba(221,_221,_221,_1)] h-[300px]'/>
+                    <div className='flex flex-col gap-4'>
+                        <div><span className='text-md text-mypink'>I Design</span>, creative fun projects based off Web and Graphic designs. I'm heavy on design. I truly believe design sells. I can design anything from posters to UI to even photoshoping documents.</div>
+                        <div><span className='text-md text-myorange'>I Build</span>, projects focusing primarily on the Front-End. I'm a firm believer of solving the most common unacknowledged problems, rather than complex ideas. I've built over 4 products from scratch for various client and also a part of my prev company.</div>
 
-                    <motion.a id='item' variants={item} href='https://www.framer.com/motion/' target='_blank' className='flex flex-col gap-3 px-10 w-[70px] xs:w-[100px] md:w-[150px] py-3 rounded-lg bg-opacity-20 backdrop-filter backdrop-blur-lg bg-white text-white font-extralight border-creme border-[1px] items-center justify-center'>
-                        <IconContext.Provider value={{size: '3.5em', }}>
-                            <FiFramer/>
-                        </IconContext.Provider>
-                        <div className='text-xs xs:text-sm '>Framer</div>                        
-                    </motion.a>
-                    <motion.a id='item' variants={item} href='https://github.com' target='_blank' className='flex flex-col gap-3 px-10 w-[70px] xs:w-[100px] md:w-[150px] py-3 rounded-lg bg-opacity-20 backdrop-filter backdrop-blur-lg bg-white text-white font-extralight border-creme border-[1px] items-center justify-center'>
-                        <IconContext.Provider value={{size: '3.5em', }}>
-                            <FaGithub />
-                        </IconContext.Provider>
-                        <div className='text-xs xs:text-sm '>Github</div>                        
-                    </motion.a>                    
-                </motion.div>
+                    
+                    </div>
                 </div>
-                <div className='flex flex-col gap-4 border-t-[1px] mx-[50px] sm:mx-[75px]'>
-                <div className=' px-[50px] sm:px-[75px] text-sm mob1:text-base md:text-md font-semibold text-center pt-10'>Creative Suite: My Editing Toolbox</div>
-                <div className='px-[50px] sm:px-[75px] text-xs md:text-[16px] pb-12'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi illo tenetur ipsa sapiente atque? Assumenda, voluptatibus velit cupiditate eos ea dignissimos libero, et distinctio quibusdam dolor, magnam rerum similique nisi?</div>
-                <motion.div id='container' variants={container} initial="hidden" whileInView="visible" viewport={{once:true}} className='px-[30px] sm:px-[75px] flex flex-row justify-center items-center flex-wrap gap-5 md:gap-10'>
-                    <motion.a id='item' variants={item} href='' target='_blank' className='flex flex-col gap-3 w-[70px] xs:w-[100px] md:w-[150px] px-10 py-3 rounded-lg bg-opacity-20 backdrop-filter backdrop-blur-lg bg-white text-white font-extralight border-creme border-[1px] items-center justify-center'>
-                        <IconContext.Provider value={{size: '3.5em', }}>
-                            <SiAdobephotoshop/>
-                        </IconContext.Provider>
-                        <div className='text-xs xs:text-sm '>PhotoShop</div>                        
-                    </motion.a>
-                    <motion.a id='item' variants={item} href='' target='_blank' className='flex flex-col gap-3 w-[70px] xs:w-[100px] md:w-[150px] px-10 py-3 rounded-lg bg-opacity-20 backdrop-filter backdrop-blur-lg bg-white text-white font-extralight border-creme border-[1px] items-center justify-center'>
-                        <IconContext.Provider value={{size: '3.5em', }}>
-                            <SiAdobelightroom/>
-                        </IconContext.Provider>
-                        <div className='text-xs xs:text-sm '>LightRoom</div>                        
-                    </motion.a>
-                    <motion.a id='item' variants={item} href='' target='_blank' className=' flex flex-col gap-3 px-10 w-[70px] xs:w-[100px] md:w-[150px] py-3 rounded-lg bg-opacity-20 backdrop-filter backdrop-blur-lg bg-white text-white font-extralight border-creme border-[1px] items-center justify-center'>
-                        <IconContext.Provider value={{size: '3.5em', }}>
-                            <SiAdobepremierepro/>
-                        </IconContext.Provider>
-                        <div className='text-[11px] xs:text-[13px] md:text-sm '>PremierePro</div>                        
-                    </motion.a>
-                    <motion.a id='item' variants={item} href='' target='_blank' className=' flex flex-col gap-3 px-10 w-[70px] xs:w-[100px] md:w-[150px] py-4 rounded-lg bg-opacity-20 backdrop-filter backdrop-blur-lg bg-white text-white font-extralight border-creme border-[1px] items-center justify-center'>
-                        <IconContext.Provider value={{size: '3.5em', }}>
-                            <SiAdobeaftereffects/>
-                        </IconContext.Provider>
-                        <div className='text-[10px] xs:text-xs md:text-sm'>AfterEffects</div>                        
-                    </motion.a>                   
-                </motion.div>
-        
-           
+                <div className='flex flex-row gap-20 border-white py-10 border-b-[1px]'>
+                    <div className='flex flex-col gap-4'>
+                        <div><span className='text-md text-myblue'>I Market</span>, through my agency, have handled multiple client's social media and helped them with online presense. </div>
+                        <div><span className='text-md text-myyellow'>I Grow</span>, your reach organically through creatively orchastrating strategies and producing video ideas. Let me hop onto the trends for you.</div>
+                    
+                    </div>
+                    <img src='/Images/marketing.png'  className='border-creme rounded-xl shadow-[10px_-10px_1px_rgba(221,_221,_221,_1)] h-[300px]'/>
+
+                </div>
+                <div className='flex flex-row gap-20 '>
+                    <img src='/Images/photographer.jpg'  className='border-creme rounded-xl shadow-[10px_-10px_1px_rgba(221,_221,_221,_1)] h-[300px]'/>
+                    <div className='flex flex-col gap-4'>
+                        <div><span className='text-md text-myorange'>I Photograph</span>, Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum quas blanditiis et culpa aliquid? Provident recusandae reiciendis veritatis voluptatem. Sit ipsum excepturi labore maiores aut soluta autem modi maxime repellendus!</div>
+                        <div><span className='text-md text-mypink'>I Produce</span> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem ea molestias reiciendis placeat optio cupiditate neque eligendi maxime vitae, odit nobis? Quidem maxime delectus iusto necessitatibus suscipit nisi quia cupiditate.</div>                   
+                    </div>
+                </div>
+                <div className='px-[50px] sm:px-[75px] text-sm mob1:text-base md:text-md font-semibold text-center w-full '>Here's my Gallery</div>
+                <div className='px-[50px] sm:px-[75px] text-xs md:text-[16px] pb-12'>These are my go-to frameworks for efficiency and performance, I can also adapt to new tools to cater the needs of clients, ensuring seamless web applications. Tech-Stack vary from project to project. I'm keen on learning new exciting technologies everyday.</div>
 
             </div>
-
+                
         </div>
     </div>
   )
