@@ -11,7 +11,7 @@ import { Outlet } from 'react-router-dom';
 import TypeIt from "typeit-react";
 import { useNav } from '../context/NavContext';
 import About from './About';
-import Services from './Services';
+import Agency from './Agency'
 import Contact from './Contact';
 import { motion, useTransform } from "framer-motion";
 import useMouse from '@react-hook/mouse-position'
@@ -96,28 +96,11 @@ const Home = () => {
     }
 
   return (
-    <div className='bg-home snap-y snap-mandatory overflow-y-scroll h-screen flex-grow z-0 ' ref={ref}>
-        <motion.div
-            variants={variants}
-            className="circle"
-            animate={cursorVariant}
-            transition={spring}
-            style={{
-                position: 'absolute',
-                left: 0,
-                top: 0,
-                pointerEvents: 'none',
-                zIndex: 9999,
-            }}
-        >
-            <span className="cursorText">
-                <img src='/Images/ufo.png' alt='UFO Cursor' style={{ width: '100%', height: '100%' }} />
-            </span>
-        </motion.div>
-
-        <div className='snap-always snap-center h-screen' >
-            <div  className='flex flex-col items-center justify-center w-full h-full px-[50px] xs:px-[100px] sm:px-[150px] lg:px-[200px] pt-8 xs:pt-12 md:pt-20'>
-                <div className='flex flex-col flex-wrap w-full sm:gap-10 px-[30px] xs:px-[75px] py-5 xs:py-[50px] text-white border-2 border-creme rounded-xl shadow-[15px_-15px_1px_rgba(221,_221,_221,_1)]'>
+    <div className='bg-black snap-y snap-mandatory overflow-y-scroll h-screen flex-grow z-0 ' ref={ref}>
+        
+        <div className='h-screen' >
+            <div  className='flex bg-black bg-center bg-cover flex-col items-center justify-center w-full h-full px-[50px] xs:px-[100px] sm:px-[150px] lg:px-[200px] pt-8 xs:pt-12 md:pt-20'>
+                <div className=' bg-black flex flex-col flex-wrap w-full sm:gap-10 px-[30px] xs:px-[75px] py-5 xs:py-[50px] text-white border-2 border-creme rounded-xl shadow-[15px_-15px_1px_rgba(221,_221,_221,_1)]'>
                     <div className='flex flex-col-reverse md:flex-row w-full h-full justify-between gap-5 md:gap-0 flex-wrap'>
                         <div className='flex-1 flex flex-col gap-2 text-center md:text-left'>
                             <div className='text-white font-sans2 text-sm mob1:text-[20px] md:text-base lg:text-md'>hey, i'm</div>
@@ -133,11 +116,11 @@ const Home = () => {
                                 />
                             </div>
                             <div className='md:hidden flex flex-row gap-8 pl-5 pt-4 items-center justify-center w-full'>
-                                <a href='' target='_blank'>
+                                {/*<a href='' target='_blank'>
                                     <IconContext.Provider value={{size: '2em'}}>
                                         <FaXTwitter />
                                     </IconContext.Provider>
-                                </a>
+                                </a>*/}
                                 <a href='' target='_blank' className=''>
                                     <IconContext.Provider value={{size: '2em'}}>
                                         <FaGithub />
@@ -163,11 +146,11 @@ const Home = () => {
                                 <img src='/Images/profile.png' className='md:w-full h-[150px] sm:h-[300px] md:h-full '/>
                             </div>
                             <div className='hidden md:flex flex-row gap-8 pl-5 pt-4 items-center justify-center w-full'>
-                                <a href='' target='_blank'>
+                               {/* <a href='' target='_blank'>
                                     <IconContext.Provider value={{size: '2em'}}>
                                         <FaXTwitter />
                                     </IconContext.Provider>
-                                </a>
+                                </a>*/}
                                 <a href='' target='_blank' className=''>
                                     <IconContext.Provider value={{size: '2em'}}>
                                         <FaGithub />
@@ -198,14 +181,14 @@ const Home = () => {
                 
             </div>
         </div>
-        <div className={navTab === 'contact'? 'snap-always snap-start h-screen' : 'snap-always snap-start min-h-screen'} >
+        <div  >
             <Navbar />
-            <div className='px-[30px] xs:px-[50px] sm:px-[100px] md:px-[200px] py-[80px]'>
+            <div className='px-[30px] xs:px-[50px] sm:px-[100px] md:px-[150px] lg:px-[170px] xl:px-[200px] py-[80px]'>
                
                     <div className=' py-10 text-white border-2 border-creme rounded-xl shadow-[15px_-15px_1px_rgba(221,_221,_221,_1)]'>
                         {navTab === 'about' && <About />}
                         {navTab === 'develop' && <Development/>}
-                        {navTab === 'service' && <Services/>}
+                        {navTab === 'agency' && <Agency/>}
                         {navTab === 'contact' && <Contact />}
                         
                     </div>

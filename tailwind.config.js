@@ -22,19 +22,25 @@ export default {
         'myblue' : '#571FF5',
         'myyellow' : '#BEFF05',
         'mypink' : '#F72798',
-        'myorange' : '#F15412'
+        'myorange' : '#F15412',
+        'mygray': '#171717',
       },
       fontSize: {
         'xs': '12px',
         'sm' : '16px',
+        'msm': '20px',
         'base' : '28px',
         'md' : '32px',
+        'lmd': '50px',
         'lg' : '80px',
         'xl' : '100px'
       },
       backgroundImage:{
-        'home' : "url('/Images/bgblk.jpg')"
+        'home' : "url('/Images/bgblk.jpg')",
+        'home2' : "url('/Images/home2.png')"
+
       },
+      
       screens: {
         'mob1': '480px',
         'xs': '768px',

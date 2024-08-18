@@ -16,12 +16,10 @@ const Navbar = () => {
                 development
                
             </button>
-            <button onClick={(e)=>setNavTab('service')} className={navTab === 'service'?'underline underline-offset-4': ' hover:text-white'}>
+            <button onClick={(e)=>setNavTab('agency')} className={navTab === 'agency'?'underline underline-offset-4': ' hover:text-white'}>
                 agency
             </button>
-            <button onClick={(e)=>setNavTab('contact')} className={navTab === 'contact'?'underline underline-offset-4': ' hover:text-white'}>
-                Contact
-            </button>
+           
 
         </div>
     </div>
