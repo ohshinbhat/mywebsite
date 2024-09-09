@@ -36,7 +36,7 @@ export default {
         'xl' : '100px'
       },
       backgroundImage:{
-        'home' : "url('/Images/bgblk.jpg')",
+        'home' : "url('/Images/bg.jpg')",
         'home2' : "url('/Images/home2.png')"
 
       },

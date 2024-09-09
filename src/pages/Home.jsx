@@ -18,7 +18,7 @@ import useMouse from '@react-hook/mouse-position'
 import { FaXTwitter } from "react-icons/fa6";
 import '../index.css'
 import Development from './Development';
-
+import ParallaxText from '../components/ParallaxText';
 const Home = () => {
     const { navTab, setNavTab} = useNav()
     const [cursorVariant, setCursorVariant] = useState("default");
@@ -96,10 +96,10 @@ const Home = () => {
     }
 
   return (
-    <div className='bg-black snap-y snap-mandatory overflow-y-scroll h-screen flex-grow z-0 ' ref={ref}>
+    <div className=' snap-y snap-mandatory overflow-y-scroll h-screen flex-grow z-0 ' ref={ref}>
         
-        <div className='h-screen' >
-            <div  className='flex bg-black bg-center bg-cover flex-col items-center justify-center w-full h-full px-[50px] xs:px-[100px] sm:px-[150px] lg:px-[200px] pt-8 xs:pt-12 md:pt-20'>
+        <div className='h-screen bg-home bg-center bg-cover' >
+            <div  className='flex bg-center bg-cover flex-col items-center justify-center w-full h-full px-[50px] xs:px-[100px] sm:px-[150px] lg:px-[200px] pt-8 xs:pt-12 md:pt-20'>
                 <div className=' bg-black flex flex-col flex-wrap w-full sm:gap-10 px-[30px] xs:px-[75px] py-5 xs:py-[50px] text-white border-2 border-creme rounded-xl shadow-[15px_-15px_1px_rgba(221,_221,_221,_1)]'>
                     <div className='flex flex-col-reverse md:flex-row w-full h-full justify-between gap-5 md:gap-0 flex-wrap'>
                         <div className='flex-1 flex flex-col gap-2 text-center md:text-left'>
@@ -181,11 +181,16 @@ const Home = () => {
                 
             </div>
         </div>
-        <div  >
+        {/* scroll ui here 
+        <div>
+            <ParallaxText baseVelocity={-5}>Developer Designer</ParallaxText>
+            <ParallaxText baseVelocity={5}>Marketing Photography</ParallaxText>
+        </div>*/}
+        <div className='bg-black' >
             <Navbar />
-            <div className='px-[30px] xs:px-[50px] sm:px-[100px] md:px-[150px] lg:px-[170px] xl:px-[200px] py-[80px]'>
+            <div className='px-[30px] xs:px-[50px] sm:px-[100px] md:px-[150px] lg:px-[170px] xl:px-[200px]'>
                
-                    <div className=' py-10 text-white border-2 border-creme rounded-xl shadow-[15px_-15px_1px_rgba(221,_221,_221,_1)]'>
+                    <div className=' py-10 text-white '>
                         {navTab === 'about' && <About />}
                         {navTab === 'develop' && <Development/>}
                         {navTab === 'agency' && <Agency/>}
