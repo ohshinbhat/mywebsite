@@ -24,7 +24,7 @@ import { SiAdobepremierepro } from "react-icons/si";
 import { SiAdobeaftereffects } from "react-icons/si";
 import { FaFigma } from "react-icons/fa";
 import { easeIn, motion } from "framer-motion";
-import { inView } from 'framer-motion';
+
 import { FiExternalLink } from "react-icons/fi";
 const Development = () => {
   const container = {
