@@ -282,39 +282,12 @@ const Development = () => {
                     </motion.a>                    
                 </motion.div>
                 </div>
-                <div className='flex flex-col gap-4 border-t-[1px] mx-[50px] sm:mx-[75px]'>
-                <div className=' px-[50px] sm:px-[75px] text-sm mob1:text-base md:text-md font-semibold text-center pt-10'>Creative Suite: My Editing Toolbox</div>
-                <div className='px-[50px] sm:px-[75px] text-xs md:text-[16px] pb-12'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi illo tenetur ipsa sapiente atque? Assumenda, voluptatibus velit cupiditate eos ea dignissimos libero, et distinctio quibusdam dolor, magnam rerum similique nisi?</div>
-                <motion.div id='container' variants={container} initial="hidden" whileInView="visible" viewport={{once:true}} className='px-[30px] sm:px-[75px] flex flex-row justify-center items-center flex-wrap gap-5 md:gap-10'>
-                    <motion.a id='item' variants={item} href='' target='_blank' className='flex flex-col gap-3 w-[70px] xs:w-[100px] md:w-[150px] px-10 py-3 rounded-lg bg-opacity-20 backdrop-filter backdrop-blur-lg bg-white text-white font-extralight border-creme border-[1px] items-center justify-center'>
-                        <IconContext.Provider value={{size: '3.5em', }}>
-                            <SiAdobephotoshop/>
-                        </IconContext.Provider>
-                        <div className='text-xs xs:text-sm '>PhotoShop</div>                        
-                    </motion.a>
-                    <motion.a id='item' variants={item} href='' target='_blank' className='flex flex-col gap-3 w-[70px] xs:w-[100px] md:w-[150px] px-10 py-3 rounded-lg bg-opacity-20 backdrop-filter backdrop-blur-lg bg-white text-white font-extralight border-creme border-[1px] items-center justify-center'>
-                        <IconContext.Provider value={{size: '3.5em', }}>
-                            <SiAdobelightroom/>
-                        </IconContext.Provider>
-                        <div className='text-xs xs:text-sm '>LightRoom</div>                        
-                    </motion.a>
-                    <motion.a id='item' variants={item} href='' target='_blank' className=' flex flex-col gap-3 px-10 w-[70px] xs:w-[100px] md:w-[150px] py-3 rounded-lg bg-opacity-20 backdrop-filter backdrop-blur-lg bg-white text-white font-extralight border-creme border-[1px] items-center justify-center'>
-                        <IconContext.Provider value={{size: '3.5em', }}>
-                            <SiAdobepremierepro/>
-                        </IconContext.Provider>
-                        <div className='text-[11px] xs:text-[13px] md:text-sm '>PremierePro</div>                        
-                    </motion.a>
-                    <motion.a id='item' variants={item} href='' target='_blank' className=' flex flex-col gap-3 px-10 w-[70px] xs:w-[100px] md:w-[150px] py-4 rounded-lg bg-opacity-20 backdrop-filter backdrop-blur-lg bg-white text-white font-extralight border-creme border-[1px] items-center justify-center'>
-                        <IconContext.Provider value={{size: '3.5em', }}>
-                            <SiAdobeaftereffects/>
-                        </IconContext.Provider>
-                        <div className='text-[10px] xs:text-xs md:text-sm'>AfterEffects</div>                        
-                    </motion.a>                   
-                </motion.div>
+              
+                
         
            
 
-            </div>
+           
 
         </div>
     </div>

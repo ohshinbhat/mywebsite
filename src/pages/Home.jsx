@@ -4,7 +4,7 @@ import Navbar from '../components/Navbar';
 import FooterDown from '../components/FooterDown';
 import { VscFoldDown } from "react-icons/vsc";
 import { FaGithub } from "react-icons/fa6";
-import { FaLinkedin } from "react-icons/fa";
+import { FaLinkedin, FaTwitter } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { IconContext } from 'react-icons';
 import { Outlet } from 'react-router-dom';
@@ -122,21 +122,25 @@ const Home = () => {
                                     </IconContext.Provider>
                                 </a>*/}
                                 <a href='' target='_blank' className=''>
-                                    <IconContext.Provider value={{size: '2em'}}>
+                                    <IconContext.Provider value={{size: '1.2em'}}>
                                         <FaGithub />
                                     </IconContext.Provider>
                                 </a>
                                 <a href='' target='_blank'>
-                                    <IconContext.Provider value={{size: '2em'}}>
+                                    <IconContext.Provider value={{size: '1.2em'}}>
                                         <FaLinkedin />
                                     </IconContext.Provider>
                                 </a>
                                 <a href='' target='_blank'>
-                                    <IconContext.Provider value={{size: '2em'}}>
+                                    <IconContext.Provider value={{size: '1.2em'}}>
                                         <FaInstagram />
                                     </IconContext.Provider>
                                 </a>
-
+                                <a href='' target='_blank'>
+                                    <IconContext.Provider value={{size: '1.2em'}}>
+                                        <FaXTwitter />
+                                    </IconContext.Provider>
+                                </a>
                             </div>
 
                             
@@ -152,18 +156,23 @@ const Home = () => {
                                     </IconContext.Provider>
                                 </a>*/}
                                 <a href='' target='_blank' className=''>
-                                    <IconContext.Provider value={{size: '2em'}}>
+                                    <IconContext.Provider value={{size: '1.2em'}}>
                                         <FaGithub />
                                     </IconContext.Provider>
                                 </a>
                                 <a href='' target='_blank'>
-                                    <IconContext.Provider value={{size: '2em'}}>
+                                    <IconContext.Provider value={{size: '1.2em'}}>
                                         <FaLinkedin />
                                     </IconContext.Provider>
                                 </a>
                                 <a href='' target='_blank'>
-                                    <IconContext.Provider value={{size: '2em'}}>
+                                    <IconContext.Provider value={{size: '1.2em'}}>
                                         <FaInstagram />
+                                    </IconContext.Provider>
+                                </a>
+                                <a href='' target='_blank'>
+                                    <IconContext.Provider value={{size: '1.2em'}}>
+                                        <FaXTwitter />
                                     </IconContext.Provider>
                                 </a>
 
@@ -201,9 +210,7 @@ const Home = () => {
                 
 
             </div>
-            <div className='px-[100px]'>
-                <FooterDown/>
-            </div>
+       
                 
         
                     
