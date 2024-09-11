@@ -50,7 +50,7 @@ const About = () => {
   return (
     <div className=''>
         <div className='flex flex-col gap-20 font-sans2 py-5 text-white'>
-            <div className='flex text-xs lg:text-sm flex-col gap-10 w-full px-[50px] sm:px-[75px]'>
+            <div className='flex text-xs lg:text-sm flex-col gap-10 w-full px-[30px] sm:px-[75px]'>
                 <div className='flex flex-col items-center justify-center md:flex-row gap-7 xs:gap-10 md:gap-20 border-white py-10 border-b-[1px]'>
                     <img src='/Images/abt.jpg'  className='border-creme rounded-xl shadow-[10px_-10px_1px_rgba(221,_221,_221,_1)]  h-[200px] sm:h-[300px] w-[200px] sm:w-[300px]'/>
                     <div className='flex flex-col gap-4'>

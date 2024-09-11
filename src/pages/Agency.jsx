@@ -9,7 +9,7 @@ import { MdOutlineCall } from "react-icons/md";
 const Agency = () => {
   return (
     <div>
-      <div className='flex flex-col gap-20 font-sans2 py-5 text-white px-[25px] xs:px-[50px] sm:px-[75px]'>
+      <div className='flex flex-col gap-20 font-sans2 py-5 text-white px-[20px] xs:px-[50px] sm:px-[75px]'>
         <div className='flex flex-col gap-4 w-full'>
           <div className='grid grid-cols-1 sm:grid-cols-3 gap-10'>
             <div className='border-creme py-5 flex flex-col items-center justify-center border-[1px] rounded-xl shadow-[5px_-5px_1px_rgba(221,_221,_221,_1)]'>

@@ -51,7 +51,7 @@ const Development = () => {
     <div className=''>
         <div className='flex flex-col gap-20 font-sans2 py-5 text-white'>
             <div className='flex flex-col gap-4 w-full'>
-                <div className='px-[50px] sm:px-[75px] text-base md:text-lmd xl:text-lg font-semibold text-center w-full '>Most Recent Projects</div>
+                <div className='px-[30px] sm:px-[75px] text-base md:text-lmd xl:text-lg font-semibold text-center w-full '>Most Recent Projects</div>
                 <motion.div id='container' variants={container} initial="hidden" whileInView="visible" viewport={{once:true}} className='  px-[30px] sm:px-[75px] grid-cols-1 md:grid-cols-3 grid justify-center items-center gap-5'>
                     <motion.div id='item' variants={item} className='flex h-full flex-col gap-3 w-full px-10 py-4 rounded-lg bg-mygray backdrop-filter backdrop-blur-lg  text-white font-extralight  border-creme border-[1px] items-center justify-center'>
                         <img src='/Images/proj1.png' className='rounded-xl'/> 
