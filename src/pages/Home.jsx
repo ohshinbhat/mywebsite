@@ -99,8 +99,8 @@ const Home = () => {
     <div className=' snap-y snap-mandatory overflow-y-scroll h-screen flex-grow z-0 ' ref={ref}>
         
         <div className='h-screen bg-home bg-center bg-cover' >
-            <div  className='flex bg-center bg-cover flex-col items-center justify-center w-full h-full px-[50px] xs:px-[100px] sm:px-[150px] lg:px-[200px] pt-8 xs:pt-12 md:pt-20'>
-                <div className=' bg-black flex flex-col flex-wrap w-full sm:gap-10 px-[30px] xs:px-[75px] py-5 xs:py-[50px] text-white border-2 border-creme rounded-xl shadow-[15px_-15px_1px_rgba(221,_221,_221,_1)]'>
+            <div  className='flex bg-center bg-cover flex-col items-center justify-center w-full h-full px-[30px] xs:px-[80px] sm:px-[150px] lg:px-[200px] pt-8 xs:pt-12 md:pt-20'>
+                <div className=' bg-black flex flex-col flex-wrap w-full sm:gap-10 px-[30px] xs:px-[75px] py-5 xs:py-[50px] text-white border-[1px] sm:border-2 border-creme rounded-xl shadow-[5px_-5px_1px_rgba(221,_221,_221,_1)] sm:shadow-[15px_-15px_1px_rgba(221,_221,_221,_1)]'>
                     <div className='flex flex-col-reverse md:flex-row w-full h-full justify-between gap-5 md:gap-0 flex-wrap'>
                         <div className='flex-1 flex flex-col gap-2 text-center md:text-left'>
                             <div className='text-white font-sans2 text-sm mob1:text-[20px] md:text-base lg:text-md'>hey, i'm</div>
