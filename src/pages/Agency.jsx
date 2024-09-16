@@ -86,13 +86,13 @@ const Agency = () => {
             </div>         
           </div>
           <div className='w-full flex items-center justify-center pt-4'>
-            <button className='flex flex-row gap-3 items-center justify-center px-5 py-2 bg-myblue border-[1px] border-white rounded-xl'>
+            <a href='https://cal.com/ohshin/30min' target='_blank' className='flex flex-row gap-3 items-center justify-center px-5 py-2 bg-myblue border-[1px] border-white rounded-xl'>
               <div className=''>Book a Call</div>
               <IconContext.Provider value={{size:'1.2em'}}>
                 <MdOutlineCall />
 
               </IconContext.Provider>
-            </button>
+            </a>
 
           </div>
 

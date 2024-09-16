@@ -121,22 +121,22 @@ const Home = () => {
                                         <FaXTwitter />
                                     </IconContext.Provider>
                                 </a>*/}
-                                <a href='' target='_blank' className=''>
+                                <a href='https://github.com/ohshinbhat' target='_blank' className=''>
                                     <IconContext.Provider value={{size: '1.2em'}}>
                                         <FaGithub />
                                     </IconContext.Provider>
                                 </a>
-                                <a href='' target='_blank'>
+                                <a href='https://www.linkedin.com/in/ohshinbhat/' target='_blank'>
                                     <IconContext.Provider value={{size: '1.2em'}}>
                                         <FaLinkedin />
                                     </IconContext.Provider>
                                 </a>
-                                <a href='' target='_blank'>
+                                <a href='https://www.instagram.com/ohshiin/' target='_blank'>
                                     <IconContext.Provider value={{size: '1.2em'}}>
                                         <FaInstagram />
                                     </IconContext.Provider>
                                 </a>
-                                <a href='' target='_blank'>
+                                <a href='https://x.com/ohshinbhat' target='_blank'>
                                     <IconContext.Provider value={{size: '1.2em'}}>
                                         <FaXTwitter />
                                     </IconContext.Provider>
@@ -155,22 +155,22 @@ const Home = () => {
                                         <FaXTwitter />
                                     </IconContext.Provider>
                                 </a>*/}
-                                <a href='' target='_blank' className=''>
+                                <a href='https://github.com/ohshinbhat' target='_blank' className=''>
                                     <IconContext.Provider value={{size: '1.2em'}}>
                                         <FaGithub />
                                     </IconContext.Provider>
                                 </a>
-                                <a href='' target='_blank'>
+                                <a href='https://www.linkedin.com/in/ohshinbhat/' target='_blank'>
                                     <IconContext.Provider value={{size: '1.2em'}}>
                                         <FaLinkedin />
                                     </IconContext.Provider>
                                 </a>
-                                <a href='' target='_blank'>
+                                <a href='https://www.instagram.com/ohshiin/' target='_blank'>
                                     <IconContext.Provider value={{size: '1.2em'}}>
                                         <FaInstagram />
                                     </IconContext.Provider>
                                 </a>
-                                <a href='' target='_blank'>
+                                <a href='https://x.com/ohshinbhat' target='_blank'>
                                     <IconContext.Provider value={{size: '1.2em'}}>
                                         <FaXTwitter />
                                     </IconContext.Provider>
