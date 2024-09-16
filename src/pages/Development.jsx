@@ -33,7 +33,21 @@ const Development = () => {
       opacity: 1,
       scale: 1,
       transition: {
-        delayChildren: 0.1, // Adjust this value
+        delayChildren: 0.5, // Adjust this value
+        staggerChildren: 0.1, // Adjust this value
+      }
+          
+       
+      
+    }
+  };
+  const container1 = {
+    hidden: { opacity: 0, scale: 0 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delayChildren: 0.2, // Adjust this value
         staggerChildren: 0.05, // Adjust this value
       }
           
@@ -54,7 +68,7 @@ const Development = () => {
         <div className='flex flex-col gap-20 font-sans2 py-5 text-white'>
             <div className='flex flex-col gap-4 w-full'>
                 <div className='px-[30px] sm:px-[75px] text-base md:text-lmd xl:text-lg font-semibold text-center w-full '>Most Recent Projects</div>
-                <motion.div id='container' variants={container} initial="hidden" whileInView="visible" viewport={{ amount: 0.2, once: false }} className='  px-[30px] sm:px-[75px] grid-cols-1 md:grid-cols-3 grid justify-center items-center gap-5'>
+                <motion.div id='container' variants={container} initial="hidden" whileInView="visible" exit="visible" viewport={{ amount: 0.1, once: true }} className='  px-[30px] sm:px-[75px] grid-cols-1 md:grid-cols-3 grid justify-center items-center gap-5'>
                     <motion.a href='https://github.com/ohshinbhat/slotflow' target='_blank' id='item' variants={item} className='flex h-full flex-col gap-3 w-full px-10 py-4 rounded-lg bg-mygray backdrop-filter backdrop-blur-lg  text-white font-extralight  border-creme border-[1px] items-center justify-center'>
                         <img src='/Images/proj1.png' className='rounded-xl'/> 
                         <div className='flex flex-row gap-3 justify-center items-center'>
@@ -131,7 +145,7 @@ const Development = () => {
                 </div>
                 <div className='px-[50px] sm:px-[75px] text-sm mob1:text-base md:text-md font-semibold text-center pt-10 '>Tools of the Trade: My Tech Stack</div>
                 <div className='px-[50px] sm:px-[75px] text-xs md:text-[16px] pb-12'>These are my go-to frameworks for efficiency and performance, I can also adapt to new tools to cater the needs of clients, ensuring seamless web applications. Tech-Stack vary from project to project. I'm keen on learning new exciting technologies everyday.</div>
-                <motion.div id='container' variants={container} initial="hidden" whileInView="visible" viewport={{ amount: 0.2, once: false }} className='px-[30px] sm:px-[75px] grid grid-cols-3 sm:flex sm:flex-row w-full justify-center flex-wrap gap-3 sm:gap-5 md:gap-10 items-center'>
+                <motion.div id='container' variants={container1} initial="hidden" whileInView="visible" viewport={{ amount: 0.1, once: true }} className='px-[30px] sm:px-[75px] grid grid-cols-3 sm:flex sm:flex-row w-full justify-center flex-wrap gap-3 sm:gap-5 md:gap-10 items-center'>
                     <motion.a id='item' variants={item} href='https://developer.mozilla.org/en-US/docs/Web/HTML' target='_blank' className='flex flex-col gap-3 w-[70px] xs:w-[100px] md:w-[150px] px-5 mob1:px-10 py-1 mob1:py-3 rounded-lg bg-opacity-20 backdrop-filter backdrop-blur-lg bg-white text-white font-extralight border-creme border-[1px] items-center justify-center'>
                         <IconContext.Provider value={{size: '3.5em', }}>
                             <TiHtml5/>
