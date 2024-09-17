@@ -133,7 +133,7 @@ const Development = () => {
                     </motion.a>               
                 </motion.div>
                 <div className='flex items-center justify-center pt-5'>            
-                    <a href='hhttps://drive.google.com/file/d/1IXT3pJUtMlRiE0BjHRUT4HwUM4WWzQn0/view?usp=sharing' target='_blank' className='w-fit flex flex-row gap-3 items-center justify-center px-5 py-2 bg-myblue border-[1px] border-white rounded-xl'>
+                    <a href='https://drive.google.com/file/d/1IXT3pJUtMlRiE0BjHRUT4HwUM4WWzQn0/view?usp=sharing' target='_blank' className='w-fit flex flex-row gap-3 items-center justify-center px-5 py-2 bg-myblue border-[1px] border-white rounded-xl'>
                         <div className=''>View Resume</div>
                         <IconContext.Provider value={{size:'1.2em'}}>
                             <IoFlashOutline /> 
