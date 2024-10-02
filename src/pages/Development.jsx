@@ -236,7 +236,7 @@ const Development = () => {
                         </IconContext.Provider>
                         <div className='text-xs xs:text-sm '>MUI</div>                        
                     </motion.a>
-                    <motion.a id='item' variants={item} href='www.figma.com' target='_blank' className='flex flex-col gap-3 w-[70px] xs:w-[100px] md:w-[150px] px-5 mob1:px-10 py-1 mob1:py-3 rounded-lg bg-opacity-20 backdrop-filter backdrop-blur-lg bg-white text-white font-extralight border-creme border-[1px] items-center justify-center'>
+                    <motion.a id='item' variants={item} href='https://www.figma.com' target='_blank' className='flex flex-col gap-3 w-[70px] xs:w-[100px] md:w-[150px] px-5 mob1:px-10 py-1 mob1:py-3 rounded-lg bg-opacity-20 backdrop-filter backdrop-blur-lg bg-white text-white font-extralight border-creme border-[1px] items-center justify-center'>
                         <IconContext.Provider value={{size: '3.5em', }}>
                             <FaFigma />
                         </IconContext.Provider>
